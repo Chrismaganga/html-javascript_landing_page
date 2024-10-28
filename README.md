@@ -30,6 +30,6 @@ This landing page template includes a hero section, feature highlights, call-to-
 To get started, simply clone the repository and open the files locally.
 
 ```bash
-git clone https://github.com/your-username/landing-page.git
-cd html_javascript_landing_page
-##run npx http-server
+https://github.com/Chrismaganga/html-javascript_landing_page
+cd html-javascript_landing_page
+run npx http-server

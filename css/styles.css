@@ -1,0 +1,135 @@
+/* 
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ */
+
+/* ---- Base Rules ---- */
+body {
+    background: linear-gradient(0deg, rgba(136, 203, 171, 1) 0%, rgba(0, 13, 60, 1) 100%);
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    color: #fff;
+}
+
+/* Typography General */
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 3em;
+    margin: 2em 0;
+    text-align: center; /* Center the heading */
+}
+
+p {
+    line-height: 1.6em;
+    color: #eee;
+    text-align: center; /* Center paragraphs */
+}
+
+/* ---- Layout Rules ---- */
+main {
+    margin: 10vh 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+}
+
+section {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    padding: 1em; /* Add padding for better spacing */
+}
+
+/* Landing Container Styles */
+.landing__container {
+    max-width: 800px; /* Limit the width for better readability */
+    text-align: center; /* Center text within the container */
+    padding: 1em;
+}
+
+/* Responsive Styles */
+@media only screen and (min-width: 35em) {
+    .landing__container {
+        padding: 4em;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar__menu {
+        flex-direction: column; /* Stack nav items on mobile */
+    }
+
+    h1 {
+        font-size: 4em; /* Smaller font size for mobile */
+    }
+
+    section {
+        padding: 2em 1em; /* Add padding for better spacing */
+        justify-content: center; /* Center content on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 3em; /* Further reduce font size */
+    }
+
+    p {
+        font-size: 0.9em; /* Adjust paragraph font size */
+    }
+
+    .page__header {
+        padding: 1em; /* Reduce header padding */
+    }
+
+    .page__footer {
+        padding: 2em 1em; /* Reduce footer padding */
+    }
+}
+
+/* ---- Module Rules ---- */
+/* Navigation Styles */
+.navbar__menu ul {
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center navigation items */
+}
+
+.navbar__menu li {
+    margin: 0 1em; /* Space between links */
+}
+
+.navbar__menu .menu__link {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar__menu .menu__link:hover {
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+/* Header Styles */
+.page__header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+/* Footer Styles */
+.page__footer {
+    background: #000;
+    padding: 3em;
+    color: #fff;
+    text-align: center; /* Center footer text */
+}
